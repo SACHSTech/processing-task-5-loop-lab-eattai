@@ -213,15 +213,16 @@ public class Sketch extends PApplet {
     int boxWidth = 5;
     int boxSpacing = 5;
 
-    for(int intRow = 0; intRow < 30; intRow ++){
-      for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 2 + (boxWidth + boxSpacing)*intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 2 + (boxWidth + boxSpacing) * intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+    for(int intColumn = 0; intColumn < 30; intColumn++){
+      for(int intRow = 29 - intColumn; intRow < 30; intRow++){
+        intX = 2 + (boxWidth + boxSpacing)*intColumn;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 2 + (boxWidth + boxSpacing) *intRow; //Instead of zero, calculate the proper intY location using 'intColumn'
 
         fill(255);
         noStroke();
         rect(intX, intY, boxWidth, boxWidth);
 
+       
       }
     }
   }
@@ -230,19 +231,73 @@ public class Sketch extends PApplet {
 
   public void draw_section6(){
 
+    int intX = 0;
+    int intY = 0;
+    int boxWidth = 5;
+    int boxSpacing = 5;
+
+    for(int intColumn = 0; intColumn < 30; intColumn++){
+      for(int intRow = intColumn; intRow < 30; intRow++){
+        intX = 302 + (boxWidth + boxSpacing)*intColumn;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 2 + (boxWidth + boxSpacing) *intRow; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, boxWidth, boxWidth);
+
+       
+      }
+    }
   }
+
+
 
   public void draw_section7(){
 
+    int intX = 0;
+    int intY = 0;
+    int boxWidth = 5;
+    int boxSpacing = 5;
+
+    for(int intColumn = 0; intColumn < 30; intColumn++){
+      for(int intRow = 0; intRow < 30 - intColumn; intRow++){
+        intX = 602 + (boxWidth + boxSpacing)*intColumn;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 2 + (boxWidth + boxSpacing) *intRow; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, boxWidth, boxWidth);
+
+       
+      }
+    }
   }
+
+  
   
   public void draw_section8(){
+    int intX = 0;
+    int intY = 0;
+    int boxWidth = 5;
+    int boxSpacing = 5;
 
+    for(int intColumn = 0; intColumn < 30; intColumn++){
+      for(int intRow = 0; intRow < intColumn; intRow++){
+        intX = 902 + (boxWidth + boxSpacing)*intColumn;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 2 + (boxWidth + boxSpacing) *intRow; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, boxWidth, boxWidth);
+
+       
+      }
+    }
   }
-
-
-
-
-
-
 }
+
+
+
+
+
+
